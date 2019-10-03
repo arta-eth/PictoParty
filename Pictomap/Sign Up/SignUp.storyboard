@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="npr-an-sEI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="b7H-PD-A08">
+            <objects>
+                <viewController id="npr-an-sEI" customClass="SignUpViewController" customModule="Pictomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xWY-WX-gnI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cr9-iw-Zxg">
+                                <rect key="frame" x="20" y="170" width="335" height="225"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Za6-oa-QUR">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Cr7-Tp-tiI"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0A-G7-4oy">
+                                        <rect key="frame" x="0.0" y="65" width="335" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="hbn-xM-B6I"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDe-L5-4h0">
+                                        <rect key="frame" x="0.0" y="130" width="335" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="xik-4J-gkL"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m83-6n-aX4">
+                                        <rect key="frame" x="0.0" y="195" width="335" height="30"/>
+                                        <state key="normal" title="Continue"/>
+                                        <connections>
+                                            <action selector="createAccount:" destination="npr-an-sEI" eventType="touchUpInside" id="GiQ-WQ-C0U"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cr9-iw-Zxg" firstAttribute="top" secondItem="kmm-pa-1Of" secondAttribute="top" constant="150" id="7uL-YN-VH7"/>
+                            <constraint firstItem="cr9-iw-Zxg" firstAttribute="centerX" secondItem="xWY-WX-gnI" secondAttribute="centerX" id="Ddk-Kn-GQK"/>
+                            <constraint firstItem="cr9-iw-Zxg" firstAttribute="leading" secondItem="kmm-pa-1Of" secondAttribute="leading" constant="20" id="Kgl-1X-6Ig"/>
+                            <constraint firstItem="kmm-pa-1Of" firstAttribute="trailing" secondItem="cr9-iw-Zxg" secondAttribute="trailing" constant="20" id="wpQ-N9-xRX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kmm-pa-1Of"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordField" destination="dDe-L5-4h0" id="7r0-yy-fv3"/>
+                        <outlet property="createAccountBtn" destination="m83-6n-aX4" id="fmA-0e-Abg"/>
+                        <outlet property="emailField" destination="Za6-oa-QUR" id="SaH-gw-eac"/>
+                        <outlet property="passwordField" destination="U0A-G7-4oy" id="KPh-7F-CDC"/>
+                        <segue destination="BIH-3v-xgI" kind="show" identifier="toSetup" id="w2v-zB-lcM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RC1-4u-K3v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2705" y="190"/>
+        </scene>
+        <!--SetupAccount-->
+        <scene sceneID="CHa-1o-MC2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SetupAccount" id="BIH-3v-xgI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HYS-4d-1uF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3383" y="189"/>
+        </scene>
+    </scenes>
+</document>

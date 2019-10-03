@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14269.14" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b3g-Jl-1N3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14252.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up-->
+        <scene sceneID="5oy-9R-0Wl">
+            <objects>
+                <viewController storyboardIdentifier="UIViewController-b3g-Jl-1N3" title="Sign Up" extendedLayoutIncludesOpaqueBars="YES" id="b3g-Jl-1N3" customClass="PhoneAuthViewController" customModule="Party_Time" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oOM-nK-BjE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Zlx-QY-oDb">
+                                <rect key="frame" x="16" y="283.5" width="343" height="100"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Calling Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6u0-dF-Yns">
+                                        <rect key="frame" x="120" y="0.0" width="103" height="30"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="o7e-am-kJv"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Shw-e1-Qpo">
+                                        <rect key="frame" x="14" y="45" width="315" height="55"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Evf-fM-YX8"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="continue" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="tel"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="6u0-dF-Yns" secondAttribute="trailing" constant="120" id="2WQ-oG-MGT"/>
+                                    <constraint firstItem="Shw-e1-Qpo" firstAttribute="leading" secondItem="Zlx-QY-oDb" secondAttribute="leading" constant="14" id="MCO-Bt-mZ3"/>
+                                    <constraint firstAttribute="trailing" secondItem="Shw-e1-Qpo" secondAttribute="trailing" constant="14" id="QyH-KR-dGI"/>
+                                    <constraint firstItem="6u0-dF-Yns" firstAttribute="leading" secondItem="Zlx-QY-oDb" secondAttribute="leading" constant="120" id="TID-tX-W4q"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KnK-xN-Hk2">
+                                <rect key="frame" x="16" y="20" width="100" height="23"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Ioa-Y8-Ecq"/>
+                                    <constraint firstAttribute="height" constant="23" id="lcm-TT-Bde"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="14"/>
+                                <state key="normal" title="Edit Profile">
+                                    <color key="titleColor" red="0.79607843140000001" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Xno-Jl-F7w" kind="unwind" unwindAction="unwindToEditControllerWithSegue:" id="kNy-gn-TYU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LSw-om-InZ">
+                                <rect key="frame" x="305" y="20" width="54" height="23"/>
+                                <color key="backgroundColor" red="0.87450980389999999" green="0.87450980389999999" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="54" id="84T-GB-Fck"/>
+                                    <constraint firstAttribute="height" constant="23" id="fDZ-gL-epi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="14"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.79607843140000001" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendCode:" destination="b3g-Jl-1N3" eventType="touchUpInside" id="Ico-y0-WGa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Zlx-QY-oDb" firstAttribute="centerY" secondItem="oOM-nK-BjE" secondAttribute="centerY" id="57u-6z-ssy"/>
+                            <constraint firstItem="Zlx-QY-oDb" firstAttribute="centerX" secondItem="oOM-nK-BjE" secondAttribute="centerX" id="933-sz-jXB"/>
+                            <constraint firstItem="Zlx-QY-oDb" firstAttribute="leading" secondItem="qx3-HN-FTW" secondAttribute="leading" constant="16" id="BdM-ad-GMg"/>
+                            <constraint firstItem="KnK-xN-Hk2" firstAttribute="leading" secondItem="qx3-HN-FTW" secondAttribute="leading" constant="16" id="R6v-ie-8Lh"/>
+                            <constraint firstItem="qx3-HN-FTW" firstAttribute="trailing" secondItem="Zlx-QY-oDb" secondAttribute="trailing" constant="16" id="YfP-Ud-f8o"/>
+                            <constraint firstItem="qx3-HN-FTW" firstAttribute="trailing" secondItem="LSw-om-InZ" secondAttribute="trailing" constant="16" id="co3-JB-546"/>
+                            <constraint firstItem="KnK-xN-Hk2" firstAttribute="top" secondItem="qx3-HN-FTW" secondAttribute="top" id="lhR-yh-VgE"/>
+                            <constraint firstItem="LSw-om-InZ" firstAttribute="top" secondItem="qx3-HN-FTW" secondAttribute="top" id="tJi-6i-7O6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qx3-HN-FTW"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="fxm-sW-OTx">
+                        <barButtonItem key="backBarButtonItem" title="Back to SMS" id="25h-Pu-TO2"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backToEdit" destination="KnK-xN-Hk2" id="QG9-VL-CsP"/>
+                        <outlet property="codeDisplay" destination="6u0-dF-Yns" id="h0a-0m-ckk"/>
+                        <outlet property="phoneNumber" destination="Shw-e1-Qpo" id="tXo-0V-vP5"/>
+                        <outlet property="sendCode" destination="LSw-om-InZ" id="mNu-vk-EBq"/>
+                        <segue destination="XBB-39-pGu" kind="show" identifier="toCode" id="5N4-od-q0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UgC-g2-Em3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Xno-Jl-F7w" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1240.8" y="-692.36453201970448"/>
+        </scene>
+        <!--UIViewController-4iI-lO-Roe-->
+        <scene sceneID="2Tc-nU-Sxm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="VerificationCode" referencedIdentifier="UIViewController-4iI-lO-Roe" id="XBB-39-pGu" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ETA-0e-YDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1974" y="-694"/>
+        </scene>
+    </scenes>
+</document>

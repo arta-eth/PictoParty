@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="73c-ba-Be8">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root Page View Controller-->
+        <scene sceneID="i5v-BE-gww">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="vertical" spineLocation="none" id="73c-ba-Be8" customClass="RootPageViewController" customModule="Pictomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="Ozj-GL-gCO" kind="unwind" identifier="back2feed" unwindAction="unwindToTabWithSegue:" id="N7F-yd-9L0"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Vu-5M-uFk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ozj-GL-gCO" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="18148" y="3125"/>
+        </scene>
+        <!--Photos TabVC-->
+        <scene sceneID="YmG-Mi-O0y">
+            <objects>
+                <viewController storyboardIdentifier="Photos" id="B3A-Je-jUs" customClass="PhotosTabVC" customModule="Pictomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jbu-Ti-Dlw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EKR-SH-hQv">
+                                <rect key="frame" x="0.0" y="5" width="375" height="51"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MfO-jP-eER"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Photo"/>
+                                    <segment title="Library"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="switchTab:" destination="B3A-Je-jUs" eventType="valueChanged" id="WVJ-a8-QMy"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wO-P1-K7n">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                            </containerView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="EKR-SH-hQv" firstAttribute="width" secondItem="8wO-P1-K7n" secondAttribute="width" id="2bd-mF-hKz"/>
+                            <constraint firstItem="8wO-P1-K7n" firstAttribute="centerX" secondItem="jbu-Ti-Dlw" secondAttribute="centerX" id="Njv-uM-I3w"/>
+                            <constraint firstItem="8wO-P1-K7n" firstAttribute="bottom" secondItem="q3T-sj-pJq" secondAttribute="bottom" id="Q30-Aq-bai"/>
+                            <constraint firstItem="8wO-P1-K7n" firstAttribute="leading" secondItem="q3T-sj-pJq" secondAttribute="leading" id="RXN-Rq-QIu"/>
+                            <constraint firstItem="EKR-SH-hQv" firstAttribute="top" secondItem="q3T-sj-pJq" secondAttribute="top" constant="5" id="T7N-Tw-DaC"/>
+                            <constraint firstItem="EKR-SH-hQv" firstAttribute="leading" secondItem="q3T-sj-pJq" secondAttribute="leading" id="UUP-BM-8Gt"/>
+                            <constraint firstItem="8wO-P1-K7n" firstAttribute="trailing" secondItem="q3T-sj-pJq" secondAttribute="trailing" id="rCz-gW-fOL"/>
+                            <constraint firstItem="q3T-sj-pJq" firstAttribute="trailing" secondItem="EKR-SH-hQv" secondAttribute="trailing" id="uIk-wT-af8"/>
+                            <constraint firstItem="8wO-P1-K7n" firstAttribute="top" secondItem="EKR-SH-hQv" secondAttribute="bottom" constant="5" id="yyG-UB-YKE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="q3T-sj-pJq"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="8wO-P1-K7n" id="jbK-bj-KHF"/>
+                        <outlet property="tab" destination="EKR-SH-hQv" id="RS2-5T-KW5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WgC-Nw-Xrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18989.599999999999" y="3124.5877061469268"/>
+        </scene>
+        <!--FinalPhotoEdit-->
+        <scene sceneID="7Sm-xQ-oYY">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FinalStep" storyboardName="FinalPhotoEdit" id="Q9R-Mt-SLy" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Inc-di-VUD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18976" y="3515"/>
+        </scene>
+    </scenes>
+</document>

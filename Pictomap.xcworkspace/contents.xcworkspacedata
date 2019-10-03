@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:niagara.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:loomy.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/artak/Documents/Pictomap/home.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:harb.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:moores.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:sauble.gpx">
+   </FileRef>
+   <FileRef
+      location = "group:Feed.storyboard">
+   </FileRef>
+   <FileRef
+      location = "group:Pictomap.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>

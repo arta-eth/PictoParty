@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xDv-2e-uxU">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Edit Profile-->
+        <scene sceneID="nYH-Ow-Pmf">
+            <objects>
+                <viewController storyboardIdentifier="edit" title="Edit Profile" wantsFullScreenLayout="YES" id="xDv-2e-uxU" customClass="ProfileViewController" customModule="Pictomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vWh-Gf-NVb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ffb-Re-Rrd">
+                                <rect key="frame" x="10" y="44" width="355" height="734"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SWq-1C-MJS">
+                                        <rect key="frame" x="30" y="50" width="295" height="523"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_DP.png" translatesAutoresizingMaskIntoConstraints="NO" id="oLh-De-jht">
+                                                <rect key="frame" x="97.666666666666657" y="0.0" width="100" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oLh-De-jht" secondAttribute="height" multiplier="1:1" id="Ts1-ux-8kh"/>
+                                                    <constraint firstAttribute="height" constant="100" id="t2j-Nx-9e7"/>
+                                                </constraints>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Zyf-oh-xkf">
+                                                <rect key="frame" x="0.0" y="108" width="295" height="415"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCF-4e-WYR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="45"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <state key="normal" title="Edit Profile Picture"/>
+                                                        <connections>
+                                                            <action selector="profileButtonPressed:" destination="xDv-2e-uxU" eventType="touchUpInside" id="ApU-pf-McI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cBf-qR-M6D">
+                                                        <rect key="frame" x="0.0" y="55" width="295" height="45"/>
+                                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Cll-D4-rzc"/>
+                                                            <constraint firstAttribute="height" constant="45" id="eSP-Jc-l7w"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <state key="normal" title="Change Current Photo"/>
+                                                        <connections>
+                                                            <segue destination="ANf-4G-ouK" kind="show" id="Haq-RN-10c"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vqu-Nj-DPF">
+                                                        <rect key="frame" x="0.0" y="110" width="295" height="45"/>
+                                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <state key="normal" title="Remove Current Photo">
+                                                            <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="removePhoto:" destination="xDv-2e-uxU" eventType="touchUpInside" id="mzq-vL-563"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Full Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zuz-ZX-KBS">
+                                                        <rect key="frame" x="0.0" y="165" width="295" height="45"/>
+                                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="45" id="EPY-FE-VYj"/>
+                                                        </constraints>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <connections>
+                                                            <action selector="chosen:forEvent:" destination="xDv-2e-uxU" eventType="editingDidEnd" id="pkr-YN-pXc"/>
+                                                            <action selector="startChoosing:forEvent:" destination="xDv-2e-uxU" eventType="editingDidBegin" id="hx3-MM-hYw"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Zcd-uQ-Oxv">
+                                                        <rect key="frame" x="0.0" y="220" width="295" height="45"/>
+                                                        <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                        <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="17"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                        <connections>
+                                                            <action selector="chosen:forEvent:" destination="xDv-2e-uxU" eventType="editingDidEnd" id="9B5-Ay-xkE"/>
+                                                            <action selector="startChoosing:forEvent:" destination="xDv-2e-uxU" eventType="editingDidBegin" id="61C-mu-b78"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="249" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="V6p-ea-7iw">
+                                                        <rect key="frame" x="0.0" y="275" width="295" height="100"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="100" id="gCJ-p0-YM9"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="mby-fG-z7c">
+                                                        <rect key="frame" x="0.0" y="385" width="295" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPs-x5-3Ft">
+                                                                <rect key="frame" x="0.0" y="0.0" width="132.66666666666666" height="30"/>
+                                                                <color key="backgroundColor" red="0.36862745099999999" green="0.3803921569" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Cancel">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="cancel:" destination="xDv-2e-uxU" eventType="touchUpInside" id="5Yf-i8-tBU"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FgU-iK-z8x">
+                                                                <rect key="frame" x="162.66666666666663" y="0.0" width="132.33333333333337" height="30"/>
+                                                                <color key="backgroundColor" red="0.36862745099999999" green="0.3803921569" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal" title="Save">
+                                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="save:" destination="xDv-2e-uxU" eventType="touchUpInside" id="DiK-Dr-uAF"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="zuz-ZX-KBS" firstAttribute="height" secondItem="Zcd-uQ-Oxv" secondAttribute="height" id="DHK-5W-jDP"/>
+                                                    <constraint firstItem="WCF-4e-WYR" firstAttribute="height" secondItem="cBf-qR-M6D" secondAttribute="height" id="NrG-kM-6xN"/>
+                                                    <constraint firstItem="Vqu-Nj-DPF" firstAttribute="height" secondItem="cBf-qR-M6D" secondAttribute="height" id="WbX-Yv-wSn"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Zyf-oh-xkf" secondAttribute="trailing" id="0hP-Ow-jiC"/>
+                                            <constraint firstItem="Zyf-oh-xkf" firstAttribute="leading" secondItem="SWq-1C-MJS" secondAttribute="leading" id="2ub-cL-PIa"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="SWq-1C-MJS" secondAttribute="bottom" constant="100" id="1Dk-pF-qAW"/>
+                                    <constraint firstItem="SWq-1C-MJS" firstAttribute="centerX" secondItem="Ffb-Re-Rrd" secondAttribute="centerX" id="8vo-rE-jwC"/>
+                                    <constraint firstAttribute="trailing" secondItem="SWq-1C-MJS" secondAttribute="trailing" constant="30" id="FxH-lG-8Xx"/>
+                                    <constraint firstItem="SWq-1C-MJS" firstAttribute="top" secondItem="Ffb-Re-Rrd" secondAttribute="top" constant="50" id="emu-d7-VfT"/>
+                                    <constraint firstItem="SWq-1C-MJS" firstAttribute="leading" secondItem="Ffb-Re-Rrd" secondAttribute="leading" constant="30" id="mNh-8A-aqx"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LX0-AV-bJv" appends="YES" id="Dxe-fR-v4r"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="0.97999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="top" secondItem="YBi-bk-L3S" secondAttribute="top" id="1Rc-ZP-g1b"/>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="bottom" secondItem="YBi-bk-L3S" secondAttribute="bottom" id="87a-8m-4hx"/>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="leading" secondItem="YBi-bk-L3S" secondAttribute="leading" constant="10" id="Cfl-EV-cRa"/>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="leading" secondItem="YBi-bk-L3S" secondAttribute="leading" constant="10" id="ZkY-ad-eiI"/>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="top" secondItem="YBi-bk-L3S" secondAttribute="top" id="f8B-qI-DUy"/>
+                            <constraint firstItem="YBi-bk-L3S" firstAttribute="trailing" secondItem="Ffb-Re-Rrd" secondAttribute="trailing" constant="10" id="hdT-Ok-0R8"/>
+                            <constraint firstItem="Ffb-Re-Rrd" firstAttribute="centerX" secondItem="vWh-Gf-NVb" secondAttribute="centerX" id="p0S-Hc-uzg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YBi-bk-L3S"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="5LA-me-p6r">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="ED0-XY-hrX">
+                            <connections>
+                                <segue destination="PRD-t1-LYV" kind="unwind" identifier="back" unwindAction="unwindToUserViewControllerWithSegue:" id="D32-Ic-lZT"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="iv4-WZ-Bi2"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bioField" destination="V6p-ea-7iw" id="bXO-9Z-GAh"/>
+                        <outlet property="bottom" destination="Zcd-uQ-Oxv" id="qH9-LY-15t"/>
+                        <outlet property="cancelBtn" destination="dPs-x5-3Ft" id="nub-6Z-wJL"/>
+                        <outlet property="chooseDP" destination="WCF-4e-WYR" id="BKm-J6-ers"/>
+                        <outlet property="fullName" destination="zuz-ZX-KBS" id="Bd4-Oc-CKJ"/>
+                        <outlet property="profilePic" destination="oLh-De-jht" id="bKv-02-wfC"/>
+                        <outlet property="saveBtn" destination="FgU-iK-z8x" id="nwM-9z-wia"/>
+                        <outlet property="scrollView" destination="Ffb-Re-Rrd" id="QvV-AV-P3C"/>
+                        <outletCollection property="chooseSource" destination="cBf-qR-M6D" collectionClass="NSMutableArray" id="gTt-Og-ahu"/>
+                        <outletCollection property="chooseSource" destination="Vqu-Nj-DPF" collectionClass="NSMutableArray" id="TsJ-TR-pCd"/>
+                        <segue destination="Ffg-2L-Yg0" kind="presentation" identifier="logOutSegue" modalTransitionStyle="crossDissolve" id="CzF-Hu-UGZ"/>
+                        <segue destination="PRD-t1-LYV" kind="unwind" identifier="saved" unwindAction="unwindToUserViewControllerWithSegue:" id="jcL-Ke-LiR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7oZ-5e-vbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="PRD-t1-LYV" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="LX0-AV-bJv">
+                    <connections>
+                        <action selector="resignKeyboard:" destination="xDv-2e-uxU" id="qzz-C2-Kes"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="14553" y="408"/>
+        </scene>
+        <!--Photos-->
+        <scene sceneID="dnk-2e-306">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhotosTab" referencedIdentifier="Photos" id="ANf-4G-ouK" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jk3-SC-E4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15240" y="408"/>
+        </scene>
+        <!--noAccVC-->
+        <scene sceneID="eXk-iK-SPA">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="out" storyboardName="Main" referencedIdentifier="noAccVC" id="Ffg-2L-Yg0" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MSM-tJ-XZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13968" y="1134"/>
+        </scene>
+        <!--PhoneNumber-->
+        <scene sceneID="b2a-dv-Fhf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PhoneNumber" id="TOS-Lu-2Ug" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FkP-Uh-Tkl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="15222" y="1133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="default_DP.png" width="564" height="564"/>
+    </resources>
+</document>

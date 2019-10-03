@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title Page-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="noAccVC" title="Title Page" id="BYZ-38-t0r" customClass="ViewController" customModule="Pictomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pictomap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNU-ud-kyK">
+                                <rect key="frame" x="66" y="272" width="242" height="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="23"/>
+                                <color key="textColor" red="0.97647058823529409" green="0.0" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tjL-bX-05R">
+                                <rect key="frame" x="128.66666666666666" y="139" width="118" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="118" id="str-6Y-gTK"/>
+                                    <constraint firstAttribute="width" constant="118" id="zoa-3G-CJt"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1xw-oz-Zjx">
+                                <rect key="frame" x="20" y="354" width="335" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsb-Q3-ksh">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="47"/>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.0" blue="0.023529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="26"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" red="0.87450980392156863" green="0.87450980392156863" blue="0.87450980392156863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleShadowColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k37-ha-eUN"/>
+                                            <segue destination="d7t-k9-AQi" kind="show" id="Ckz-VG-jFx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lRC-Vk-U9r">
+                                        <rect key="frame" x="0.0" y="57" width="335" height="47"/>
+                                        <color key="backgroundColor" red="0.9872165322303772" green="0.14507383108139038" blue="0.021804386749863625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="26"/>
+                                        <state key="normal" title="Sign In">
+                                            <color key="titleColor" red="0.87914508581161499" green="0.84784704446792603" blue="0.85083621740341187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="WFk-HU-H8P" kind="show" id="xwV-O6-uFv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lRC-Vk-U9r" secondAttribute="trailing" id="GkY-Mk-amy"/>
+                                    <constraint firstItem="lRC-Vk-U9r" firstAttribute="leading" secondItem="1xw-oz-Zjx" secondAttribute="leading" id="cLX-q8-nr5"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dsb-Q3-ksh" secondAttribute="trailing" id="ckU-5w-D2P"/>
+                                    <constraint firstItem="Dsb-Q3-ksh" firstAttribute="leading" secondItem="1xw-oz-Zjx" secondAttribute="leading" id="mXL-wX-X7A"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tjL-bX-05R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3GK-Gl-FWJ"/>
+                            <constraint firstItem="LNU-ud-kyK" firstAttribute="leading" secondItem="248-dN-wR3" secondAttribute="leading" constant="66" id="9AI-fX-W6i"/>
+                            <constraint firstItem="1xw-oz-Zjx" firstAttribute="leading" secondItem="248-dN-wR3" secondAttribute="leading" constant="20" id="Ebl-e4-6Si"/>
+                            <constraint firstItem="LNU-ud-kyK" firstAttribute="top" secondItem="tjL-bX-05R" secondAttribute="bottom" constant="15" id="TNR-p9-V9R"/>
+                            <constraint firstItem="1xw-oz-Zjx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="csd-kT-7lC"/>
+                            <constraint firstItem="1xw-oz-Zjx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="dzw-BF-sVH"/>
+                            <constraint firstItem="248-dN-wR3" firstAttribute="trailing" secondItem="1xw-oz-Zjx" secondAttribute="trailing" constant="20" id="eRd-bL-9Ci"/>
+                            <constraint firstItem="tjL-bX-05R" firstAttribute="top" secondItem="248-dN-wR3" secondAttribute="top" constant="95" id="iUy-hF-Wzz"/>
+                            <constraint firstItem="248-dN-wR3" firstAttribute="trailing" secondItem="LNU-ud-kyK" secondAttribute="trailing" constant="67" id="s4Y-Kc-ooj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="248-dN-wR3"/>
+                    </view>
+                    <connections>
+                        <outlet property="getStarted" destination="Dsb-Q3-ksh" id="BVs-5V-Ou5"/>
+                        <segue destination="aBP-Nc-IDC" kind="unwind" identifier="logOut" unwindAction="unwindToViewControllerWithSegue:" id="Vla-Ld-VH7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="aBP-Nc-IDC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="-692.36453201970448"/>
+        </scene>
+        <!--Storyboard Reference-->
+        <scene sceneID="2XG-9J-Dn4">
+            <objects>
+                <viewControllerPlaceholder id="Ayv-0X-COB" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r1c-Mu-itr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="14521" y="420"/>
+        </scene>
+        <!--SignUp-->
+        <scene sceneID="Xjc-la-akj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignUp" id="d7t-k9-AQi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tpr-RC-jcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="626" y="-776"/>
+        </scene>
+        <!--SignIn-->
+        <scene sceneID="36v-YI-s4z">
+            <objects>
+                <viewControllerPlaceholder storyboardName="SignIn" id="WFk-HU-H8P" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KAw-AP-kdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="630" y="-622"/>
+        </scene>
+    </scenes>
+</document>
